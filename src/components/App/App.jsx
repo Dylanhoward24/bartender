@@ -14,10 +14,10 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
+// import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
-// import HomePage from '../HomePage/HomePage';
+import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
@@ -58,7 +58,7 @@ function App() {
             exact
             path="/user"
           >
-            <UserPage />
+            <HomePage />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -107,6 +107,7 @@ function App() {
               <Redirect to="/user" />
               :
               // Otherwise, show the Landing page
+              // <LandingPage/>
               <LandingPage/>
             }
           </Route>
